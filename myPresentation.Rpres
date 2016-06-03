@@ -1,0 +1,45 @@
+An App to Compare and Search for Car Performances
+========================================================
+author: Kassem Saleh
+date: May 29, 2016
+autosize: true
+
+Brief Description of App and Presentation
+========================================================
+
+This presentation is done using RStudio Presenter to pitch the idea of the App developed in Part 1 of the Coursera Data Products course. 
+
+The App includes a server file (server.R) and a user interface file (ui.R) to allow the user to:
+
+- Display the content of the data set
+- Filter the displayed data using different UI components: sliders, checkboxes, ..
+- Sort the displayed data in increasing or decreasing order
+
+The App Interface
+========================================================
+
+The interface is divided into two parts:
+
+- The UI for getting inputs is on the left
+- The searchable and sorted results are on the right
+
+![alt text](myimage.png) 
+
+View of the Data on Cars
+========================================================
+Data used in our App is loaded from the Motor Trend Car Road Tests (mtcars) dataset. Attributes of the data include fuel consumption and ten other features of automobile design and performance for 32 automobiles (1973-74 models). 
+
+- Some initial data in the dataset
+```{r}
+head(mtcars)
+```
+
+A Scatter Plot Relating Dataset Attributes
+========================================================
+A scatterplot showing the relationships between  Miles per Gallon (mpg), Weight of the car (w), Displacement (disp) and Horse Power (hp) 
+
+```{r, warning=FALSE, fig.height=10, fig.width=16, echo=FALSE}
+library(car)
+scatterplot.matrix(~mpg+wt+disp+hp, data=mtcars, cex.axis=1.5)
+```
+
